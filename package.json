@@ -1,0 +1,47 @@
+{
+  "name": "ts-lib-starter",
+  "version": "1.1.0",
+  "description": "A Javascript library starter for projects written in TypeScript",
+  "main": "src/lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "src/lib/**/*"
+  ],
+  "devDependencies": {
+    "@types/jest": "27.0.x",
+    "@types/node": "17.0.x",
+    "@typescript-eslint/eslint-plugin": "5.8.x",
+    "@typescript-eslint/parser": "5.8.x",
+    "eslint": "8.5.x",
+    "eslint-config-airbnb-base": "15.0.x",
+    "eslint-config-airbnb-typescript": "16.1.x",
+    "eslint-plugin-import": "2.25.x",
+    "eslint-plugin-jest": "25.3.x",
+    "jest": "27.4.x",
+    "ts-jest": "27.1.x",
+    "ts-node": "10.4.x",
+    "typescript": "4.5.x"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "format": "prettier --write \"./src/**/*.ts\"",
+    "lint": "eslint \"./src/**/*.ts\" --fix",
+    "postversion": "git push && git push --tags",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "test": "jest --config ./jestconfig.json",
+    "version": "npm run format && git add -A src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rwaterman/ts-lib-starter.git"
+  },
+  "keywords": [
+    "TypeScript",
+    "Library",
+    "Starter"
+  ],
+  "author": "Rick Waterman",
+  "license": "MIT"
+}
