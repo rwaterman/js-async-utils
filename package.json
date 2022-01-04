@@ -1,7 +1,7 @@
 {
-  "name": "ts-lib-starter",
-  "version": "1.1.0",
-  "description": "A Javascript library starter for projects written in TypeScript",
+  "name": "js-async-utils",
+  "version": "0.1",
+  "description": "Typed, Small, dependency-free, lightweight async helper/utility functions we use all the time",
   "main": "src/lib/index.js",
   "types": "lib/index.d.ts",
   "files": [
@@ -35,12 +35,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rwaterman/ts-lib-starter.git"
+    "url": "git+https://github.com/rwaterman/js-async-utils.git"
   },
   "keywords": [
     "TypeScript",
     "Library",
-    "Starter"
+    "Async"
   ],
   "author": "Rick Waterman",
   "license": "MIT"
