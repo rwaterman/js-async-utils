@@ -1,10 +1,10 @@
-export type ToSuccess = { err: null, res: any };
-export type ToError = { err: Error, res: null };
+export type ToSuccess<T> = { res: T; err: null };
+export type ToError<E> = { res: null; err: E };
 
-export async function to<T = never>(promise: Promise<T>): Promise<ToSuccess | ToError> {
+export async function to<R = unknown, E = Error>(promise: Promise<R>): Promise<ToSuccess<R> | ToError<E>> {
   try {
     return { err: null, res: await promise };
   } catch (err) {
-    return { err: err as Error, res: null };
+    return { err: err as E, res: null };
   }
 }
